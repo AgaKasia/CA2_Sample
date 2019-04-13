@@ -1,0 +1,48 @@
+﻿<Window x:Class="SampleCA2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SampleCA2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="725"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+            <Label Content="All" FontSize="20" Foreground="Gray" Margin="20,0"/>
+            <RadioButton GroupName="EmployeeType" Tag="All" Checked="RadioButton_Checked" VerticalAlignment="Center"/>
+            <Label Content="Employees" FontSize="20" Foreground="Gray" Margin="20,0"/>
+            <RadioButton  GroupName="EmployeeType" Tag="Employee" Checked="RadioButton_Checked" VerticalAlignment="Center"/>
+            <Label Content="Part Time Employees" FontSize="20" Foreground="Gray" Margin="20,0"/>
+            <RadioButton  GroupName="EmployeeType" Tag="PartTimer" Checked="RadioButton_Checked" VerticalAlignment="Center"/>
+            <Label Content="Contractors" FontSize="20" Foreground="Gray" Margin="20,0"/>
+            <RadioButton  GroupName="EmployeeType" Tag="Contractor" Checked="RadioButton_Checked" VerticalAlignment="Center"/>
+
+
+        </StackPanel>
+
+        <ListBox Grid.Row="1" x:Name="lbxEmployees" Margin="10"/>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+            <Label Content="Employees" Foreground="Gray" FontSize="20" />
+            <TextBlock x:Name="tblkEmployeeCount" Text="10" Background="Gray" Foreground="White" FontSize="20" Margin="5" Width="25" Padding="0,0,0,0"/>
+
+            <Label Content="Part Timers" Foreground="Gray" FontSize="20" />
+            <TextBlock x:Name="tblkPartTimeCount" Text="4" Background="Gray" Foreground="White" FontSize="20" Margin="5" Width="25" Padding="5,0,0,0"/>
+
+            <Label Content="Contractors" Foreground="Gray" FontSize="20" />
+            <TextBlock x:Name="tblkContractorCount" Text="6" Background="Gray" Foreground="White" FontSize="20" Margin="5" Width="25" Padding="5,0,0,0"/>
+
+
+        </StackPanel>
+
+    </Grid>
+</Window>
